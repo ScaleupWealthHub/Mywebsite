@@ -1,0 +1,27 @@
+kind = "web"
+previewPath = "/"
+title = "ScaleUp Wealth Hub"
+version = "1.0.0"
+id = "artifacts/scaleup-wealth-hub"
+router = "path"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 18584
+
+[services.development]
+run = "pnpm --filter @workspace/scaleup-wealth-hub run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/scaleup-wealth-hub", "run", "build" ]
+serve = "static"
+publicDir = "artifacts/scaleup-wealth-hub/dist/public"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "18584"
+BASE_PATH = "/"
