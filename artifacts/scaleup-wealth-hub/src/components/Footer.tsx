@@ -1,7 +1,7 @@
 import { Link } from "wouter";
-import { Zap } from "lucide-react";
 import { SiFacebook, SiInstagram, SiTiktok, SiYoutube, SiWhatsapp } from "react-icons/si";
 import { FaLinkedin } from "react-icons/fa";
+import logoSrc from "@/assets/logo.png";
 
 export function Footer() {
   return (
@@ -11,13 +11,25 @@ export function Footer() {
           
           {/* Brand */}
           <div className="flex flex-col gap-4">
-            <Link href="/" className="flex items-center gap-2">
-              <div className="bg-primary text-white p-1.5 rounded-lg">
-                <Zap size={20} fill="currentColor" />
+            <Link href="/" className="flex items-center">
+              <div
+                className="relative overflow-hidden"
+                style={{ width: "160px", height: "58px" }}
+                aria-label="ScaleUp Wealth Hub"
+              >
+                <img
+                  src={logoSrc}
+                  alt="ScaleUp Wealth Hub"
+                  style={{
+                    mixBlendMode: "screen",
+                    position: "absolute",
+                    width: "222px",
+                    height: "auto",
+                    left: "-28px",
+                    top: "-32px",
+                  }}
+                />
               </div>
-              <span className="font-heading font-bold text-xl tracking-tight text-white">
-                ScaleUp Wealth Hub
-              </span>
             </Link>
             <p className="text-white/70 font-medium mt-2">
               Digital Skills. Smart Strategies. More Income.

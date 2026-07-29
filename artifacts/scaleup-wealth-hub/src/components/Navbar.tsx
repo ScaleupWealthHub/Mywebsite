@@ -1,7 +1,8 @@
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "wouter";
-import { Menu, X, ChevronDown, Zap } from "lucide-react";
+import { Menu, X, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import logoSrc from "@/assets/logo.png";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -35,17 +36,25 @@ export function Navbar() {
       }`}
     >
       <div className="container mx-auto px-4 md:px-6 flex items-center justify-between">
-        <Link href="/" onClick={closeMenu} className="flex items-center gap-2 z-50">
-          <div className="bg-primary text-white p-1.5 rounded-lg">
-            <Zap size={20} fill="currentColor" />
-          </div>
-          <span
-            className={`font-heading font-bold text-xl tracking-tight ${
-              isScrolled ? "text-foreground" : location === "/" ? "text-white" : "text-foreground"
-            }`}
+        <Link href="/" onClick={closeMenu} className="flex items-center z-50">
+          <div
+            className="relative overflow-hidden"
+            style={{ width: "160px", height: "58px" }}
+            aria-label="ScaleUp Wealth Hub"
           >
-            ScaleUp Wealth Hub
-          </span>
+            <img
+              src={logoSrc}
+              alt="ScaleUp Wealth Hub"
+              style={{
+                mixBlendMode: "screen",
+                position: "absolute",
+                width: "222px",
+                height: "auto",
+                left: "-28px",
+                top: "-32px",
+              }}
+            />
+          </div>
         </Link>
 
         {/* Desktop Nav */}
