@@ -12,7 +12,8 @@ import { Button } from "@/components/ui/button";
 import { 
   BookOpen, Edit3, TrendingUp, Presentation, Sparkles, 
   Video, Globe, Smartphone, UserPlus, PenTool, Lightbulb,
-  Search, Zap, Target, Settings, Briefcase, Users, Hammer, MapPin, Bot, Star
+  Search, Zap, Target, Settings, Briefcase, Users, Hammer, MapPin, Bot, Star,
+  Gift, Rocket, Award, Crown
 } from "lucide-react";
 
 export default function HomePage() {
@@ -305,6 +306,91 @@ export default function HomePage() {
               title="Community Focus"
               description="Learn, connect and grow with other individuals pursuing similar goals."
             />
+          </div>
+        </div>
+      </section>
+
+      {/* SECTION: FEATURED PRODUCT - 360 MILLIONAIRE AFFILIATE FORMULA */}
+      <section className="py-24 bg-gradient-to-br from-amber-50 via-orange-50 to-yellow-50 border-y-2 border-amber-200/30">
+        <div className="container mx-auto px-4">
+          <div className="max-w-5xl mx-auto">
+            <div className="text-center mb-4 reveal">
+              <span className="inline-block py-2 px-6 rounded-full bg-gradient-to-r from-amber-500 to-orange-500 text-white font-bold text-sm uppercase tracking-wider shadow-lg">
+                ⭐ HOT PROMOTION
+              </span>
+            </div>
+
+            <div className="text-center reveal">
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold font-heading text-foreground mb-4">
+                360 Millionaire Affiliate Formula
+              </h2>
+              <p className="text-xl md:text-2xl font-bold text-amber-600 mb-4">
+                🚀 Your ₦15,000 Ticket to Financial Freedom
+              </p>
+              <p className="text-lg text-muted-foreground leading-relaxed mb-6 max-w-3xl mx-auto">
+                <span className="font-bold text-amber-700">FINALLY REVEALED!</span> The 360° side of affiliate marketing no one explains. A complete, step-by-step system showing beginners how to earn online using just their smartphone.
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-3 gap-4 max-w-4xl mx-auto mb-8">
+              <div className="bg-white/80 backdrop-blur-sm border border-amber-200 rounded-xl p-5 text-center shadow-sm hover:shadow-md transition-all reveal">
+                <Gift className="w-8 h-8 text-amber-500 mx-auto mb-3" />
+                <h4 className="font-bold text-foreground text-sm mb-1">Affiliate & Sales Mastery</h4>
+                <p className="text-xs text-muted-foreground">From scratch to your first $100</p>
+              </div>
+              <div className="bg-white/80 backdrop-blur-sm border border-amber-200 rounded-xl p-5 text-center shadow-sm hover:shadow-md transition-all reveal" style={{ transitionDelay: '0.1s' }}>
+                <Rocket className="w-8 h-8 text-amber-500 mx-auto mb-3" />
+                <h4 className="font-bold text-foreground text-sm mb-1">Mindset Reprogramming</h4>
+                <p className="text-xs text-muted-foreground">Kill fear & build consistency</p>
+              </div>
+              <div className="bg-white/80 backdrop-blur-sm border border-amber-200 rounded-xl p-5 text-center shadow-sm hover:shadow-md transition-all reveal" style={{ transitionDelay: '0.2s' }}>
+                <Crown className="w-8 h-8 text-amber-500 mx-auto mb-3" />
+                <h4 className="font-bold text-foreground text-sm mb-1">Copywriting & Closing</h4>
+                <p className="text-xs text-muted-foreground">High-converting sales messages</p>
+              </div>
+            </div>
+
+            <div className="text-center bg-white/90 backdrop-blur-sm border-2 border-amber-300 rounded-2xl p-8 max-w-2xl mx-auto shadow-xl reveal">
+              <div className="flex flex-col sm:flex-row items-center justify-center gap-6 mb-4">
+                <div className="text-center">
+                  <p className="text-sm text-muted-foreground line-through">₦35,000</p>
+                  <p className="text-4xl font-bold text-accent">₦15,000</p>
+                  <p className="text-xs text-amber-600 font-semibold">🔥 57% DISCOUNT</p>
+                </div>
+                <div className="border-l-2 border-amber-200 h-12 hidden sm:block"></div>
+                <div className="text-left">
+                  <p className="font-bold text-foreground text-sm">Plus FREE Bonuses:</p>
+                  <ul className="text-xs text-muted-foreground">
+                    <li>✓ Club 360 Millionaires Mentorship</li>
+                    <li>✓ Promotional Samples & Scripts</li>
+                    <li>✓ WhatsApp DM Scripts</li>
+                  </ul>
+                </div>
+              </div>
+
+              <a 
+                href="https://nestuge.com/rv4uz-tfq?affiliate=Ufi4xM" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="inline-block w-full sm:w-auto"
+              >
+                <Button className="bg-gradient-to-r from-amber-500 to-orange-500 hover:from-amber-600 hover:to-orange-600 text-white font-bold h-16 px-12 rounded-full text-lg shadow-lg hover:shadow-xl transition-all w-full">
+                  🚀 GET 360 MAF NOW — ₦15,000 ONLY
+                </Button>
+              </a>
+              <p className="text-xs text-muted-foreground mt-3">
+                ⚡ Price increases soon! Secure your spot today.
+              </p>
+              <p className="text-xs text-amber-600 mt-2 font-medium">
+                🔗 Affiliate Link: I earn a commission if you purchase
+              </p>
+            </div>
+
+            <div className="text-center mt-6 reveal">
+              <p className="text-sm text-muted-foreground max-w-2xl mx-auto italic">
+                "Make your first $100 – $500 in as little as 7–30 days, even if you've never made $1 online before."
+              </p>
+            </div>
           </div>
         </div>
       </section>
