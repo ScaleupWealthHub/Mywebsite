@@ -16,12 +16,32 @@ import {
   Gift, Rocket, Award, Crown
 } from "lucide-react";
 
+// Declare fbq for TypeScript
+declare global {
+  interface Window {
+    fbq: any;
+  }
+}
+
 export default function HomePage() {
   useScrollReveal();
 
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+
+  // Track product click
+  const handleProductClick = () => {
+    if (typeof window.fbq !== 'undefined') {
+      window.fbq('track', 'Lead', {
+        content_name: '360 Millionaire Affiliate Formula',
+        content_category: 'Product',
+        value: 15000,
+        currency: 'NGN'
+      });
+      console.log('Meta Pixel: Lead event tracked');
+    }
+  };
 
   return (
     <div className="min-h-screen bg-background font-sans">
@@ -372,6 +392,7 @@ export default function HomePage() {
                 href="https://nestuge.com/rv4uz-tfq?affiliate=Ufi4xM" 
                 target="_blank" 
                 rel="noopener noreferrer"
+                onClick={handleProductClick}
                 className="inline-block w-full sm:w-auto"
               >
                 <Button className="bg-gradient-to-r from-amber-500 to-orange-500 hover:from-amber-600 hover:to-orange-600 text-white font-bold h-16 px-12 rounded-full text-lg shadow-lg hover:shadow-xl transition-all w-full">
